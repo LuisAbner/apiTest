@@ -126,3 +126,5 @@ Importar BD
 
 Scaffold-DbContext "Data Source=LUISABNER\SQLEXPRESS;Initial Catalog=Libreria;user id=sa; password=luis8490; Encrypt=false" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context "LibreriaContext"
 
+
+System.Data.SqlClient

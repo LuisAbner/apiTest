@@ -33,9 +33,34 @@ create table book_gender(
 	book_id int FOREIGN KEY REFERENCES book(id_book),
 	gender_id int FOREIGN KEY REFERENCES genders(id_gender)
 )
+select * from users
+DECLARE @username NVARCHAR(150);
+DECLARE @id_user INT;
 
- 
+-- Declara el cursor
+DECLARE user_cursor CURSOR FOR
+SELECT id_user, username
+FROM users;
 
- select * from users u inner join roles r on u.role_id = r.id_role  ;
- 
+-- Abre el cursor
+OPEN user_cursor;
+
+-- Recupera la primera fila
+FETCH NEXT FROM user_cursor INTO @id_user, @username;
+
+-- Itera sobre las filas
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    -- Aquí puedes realizar la acción que necesites, por ejemplo, imprimir el username
+    PRINT @username;
+
+    -- Obtiene la siguiente fila
+    FETCH NEXT FROM user_cursor INTO @id_user, @username;
+END
+
+-- Cierra el cursor
+CLOSE user_cursor;
+
+-- Libera el cursor
+DEALLOCATE user_cursor;
 
