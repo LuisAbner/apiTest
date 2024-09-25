@@ -20,10 +20,11 @@ namespace ApiLibreria.Controllers
         [HttpPost]
         public async Task<IActionResult> Save(User user)
         {
-            bool response = await UserRepository.Save(user) == 1 ? true : false;
+            int idNewUser = await UserRepository.Save(user);
+            bool response = idNewUser >= 1 ? true : false;
             if (response)
             {
-                return Ok("Registrado Correctamente");
+                return Ok($"Registrado Correctamente, el id registrado es: {idNewUser}");
             }
             else
             {
@@ -45,6 +46,20 @@ namespace ApiLibreria.Controllers
                 return NotFound("No existe registro con el ID");
             }
             return NoContent();
+        }
+        [HttpPut]
+        public async Task<IActionResult> Update(User user)
+        {
+            int response = await UserRepository.Update(user);
+            bool isSuccess = response == 1 ? true : false;
+            if (isSuccess)
+            {
+                return Ok("Se edito correctamente");
+            }
+            else
+            {
+                return NotFound("No existe registro con el ID");
+            }
         }
     }
 }

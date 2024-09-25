@@ -31,13 +31,17 @@ namespace ApiLibreria.Repository
             List<User> users = new List<User>();
             using (LibreriaContext context = new LibreriaContext())
             {
-                users = await (from u in context.Users join r in context.Roles on u.RoleId equals r.IdRole 
+                /*users = await (from u in context.Users join r in context.Roles on u.RoleId equals r.IdRole 
                                select new User { 
                                 IdUser = u.IdUser,
                                 Username = u.Username,
                                 RoleId = r.IdRole,
                                 Role= r
-                               }).ToListAsync<User>();                
+                               }).ToListAsync<User>(); */
+                users = await (from u in context.Users select u).ToListAsync();
+                foreach (var user in users) {
+                    await context.Entry(user).Reference(u => u.Role).LoadAsync();
+                }
             }
             return users;
         }
@@ -49,8 +53,19 @@ namespace ApiLibreria.Repository
                 user.PasswordUs = EncryptPassword.Encrypt(user.PasswordUs);
                 context.Users.Add(user);
                 isSuccess = await context.SaveChangesAsync();
+                isSuccess = user.IdUser;
+
             }
             return isSuccess;
+        }
+        public static async Task<int> Update(User user)
+        {            
+            using (LibreriaContext context =  new LibreriaContext())
+            {
+                context.Entry(user).State = EntityState.Modified;
+                return await context.SaveChangesAsync();
+            }
+            
         }
         public static async Task<int?> DeleteById(int id)
         {
