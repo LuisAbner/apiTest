@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|c:\\users\\luist\\source\\repos\\apilibreria\\apilibreria\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|solutionrelative:apilibreria\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|c:\\users\\luist\\source\\repos\\apilibreria\\apilibreria\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|solutionrelative:apilibreria\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|c:\\users\\luist\\source\\repos\\apilibreria\\apilibreria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|solutionrelative:apilibreria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|c:\\users\\luist\\source\\repos\\apilibreria\\apilibreria\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|solutionrelative:apilibreria\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|c:\\users\\luist\\source\\repos\\apilibreria\\apilibreria\\security\\generatetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|solutionrelative:apilibreria\\security\\generatetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|c:\\users\\luist\\source\\repos\\apilibreria\\apilibreria\\security\\encryptpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|solutionrelative:apilibreria\\security\\encryptpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|c:\\users\\luist\\source\\repos\\apilibreria\\apilibreria\\models\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E167E8B-FBF2-4611-8B30-BEBA55E2CC81}|ApiLibreria\\ApiLibreria.csproj|solutionrelative:apilibreria\\models\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Program.cs",
+              "RelativeDocumentMoniker": "ApiLibreria\\Program.cs",
+              "ToolTip": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Program.cs",
+              "RelativeToolTip": "ApiLibreria\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T23:47:48.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ApiLibreria\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "ApiLibreria\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAACIAAAAAAAAAAAA0wDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T22:45:54.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenerateToken.cs",
+              "DocumentMoniker": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Security\\GenerateToken.cs",
+              "RelativeDocumentMoniker": "ApiLibreria\\Security\\GenerateToken.cs",
+              "ToolTip": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Security\\GenerateToken.cs",
+              "RelativeToolTip": "ApiLibreria\\Security\\GenerateToken.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T07:00:20.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "ApiLibreria\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "ApiLibreria\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAawDYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T06:53:37.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "ApiLibreria\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "ApiLibreria\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowBQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T06:52:37.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LibreriaContext.cs",
+              "DocumentMoniker": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Models\\LibreriaContext.cs",
+              "RelativeDocumentMoniker": "ApiLibreria\\Models\\LibreriaContext.cs",
+              "ToolTip": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Models\\LibreriaContext.cs",
+              "RelativeToolTip": "ApiLibreria\\Models\\LibreriaContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T06:44:33.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EncryptPassword.cs",
+              "DocumentMoniker": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Security\\EncryptPassword.cs",
+              "RelativeDocumentMoniker": "ApiLibreria\\Security\\EncryptPassword.cs",
+              "ToolTip": "C:\\Users\\luist\\source\\repos\\ApiLibreria\\ApiLibreria\\Security\\EncryptPassword.cs",
+              "RelativeToolTip": "ApiLibreria\\Security\\EncryptPassword.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T06:06:30.607Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

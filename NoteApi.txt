@@ -1,0 +1,128 @@
+Creación de tablas
+
+
+/*/*/*/*/*/*/*/*Generar Token JWT*/*/*/*/*/*/
+
+Instalar Nuget 
+
+Microsoft.AspNetCore.Authentication.JwtBearer
+
+*****Configuración Program.cs*******
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
+    };
+});
+
+app.UseAuthorization();
+
+*****Clase token*******
+
+public class GenerateToken
+{
+    public string Generate(UserModel user)
+    {
+        var builder = new ConfigurationBuilder()
+          .SetBasePath(Directory.GetCurrentDirectory())
+          .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+          .AddJsonFile("archivodos.json", optional: true, reloadOnChange: true);
+        IConfiguration _config = builder.Build();
+
+        SymmetricSecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
+        SigningCredentials credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+        //Crear Claims
+        // Crear los claims
+        Claim[] claims = new[]
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Username),
+            new Claim("Correo", user.EmailAddress),
+            new Claim(ClaimTypes.GivenName, user.FrirstName),
+            new Claim(ClaimTypes.Surname, user.LastName),
+            new Claim(ClaimTypes.Role, user.Rol),
+        };
+
+        // Crear el token
+        
+
+        JwtSecurityToken token = new JwtSecurityToken(
+            _config["Jwt:Issuer"],
+            _config["Jwt:Audience"],
+            claims,
+            expires: DateTime.Now.AddMinutes(60),
+            signingCredentials: credentials);
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}
+
+*****Permisos controller*******
+
+[Authorize(Roles = "Admin")]
+
+*****Obtener Claims*******
+    ClaimsIdentity? identity = HttpContext.User.Identity as ClaimsIdentity;
+    if (identity != null)
+    {
+        var userClaims = identity.Claims;
+        //return Ok(userClaims.FirstOrDefault(u => u.Type == ClaimTypes.Role)?.Value);
+        return Ok(userClaims.FirstOrDefault(u => u.Type == "Correo")?.Value);
+    }
+    return NotFound("No esta logeado");
+
+
+
+
+/*/*/*/*/*/*/*/*Configuración swagger*/*/*/*/*/*/
+
+builder.Services.AddSwaggerGen(c => {
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Libreria",
+        Version = "v1"
+    });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Añadir Token Bearer",
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+        {
+            new OpenApiSecurityScheme {
+                Reference = new OpenApiReference {
+                    Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
+});
+
+
+/*/*/*/*/*/*/*/*Implementar EntityFramework*/*/*/*/*/*/
+
+Instalar librerías nuget
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+Importar BD
+
+Scaffold-DbContext "Data Source=LUISABNER\SQLEXPRESS;Initial Catalog=Libreria;user id=sa; password=luis8490; Encrypt=false" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context "LibreriaContext"
+
